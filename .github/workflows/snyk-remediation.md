@@ -4,7 +4,7 @@ description: |
   applications. Checks out the branch, establishes a build/test baseline, runs a
   Snyk Open Source (SCA) scan, applies dependency upgrades in a scan → fix → repeat
   loop, validates the build and tests, and opens ONE new pull request (base
-  GHAW-Test) with the dependency fixes plus a concise remediation summary in the
+  repository default branch) with the dependency fixes plus a concise remediation summary in the
   PR description.
 
 # Manual run only. workflow_dispatch checks out the branch passed via --ref, runs
@@ -127,12 +127,11 @@ network:
 tools:
   bash: true
 
-# All writes surface as a new pull request (base GHAW-Test).
-# Use GITHUB_TOKEN (not a PAT): the bot opens a PR whose base is GHAW-Test.
-# GitHub does NOT trigger workflows from GITHUB_TOKEN events, and this workflow
-# only runs on workflow_dispatch anyway, so there is no auto-trigger loop.
+# All writes surface as a new pull request (base repository default branch).
+# Prefer PATs when available so downstream workflow triggers are allowed.
+# Fallback to GITHUB_TOKEN if no PAT secret is configured.
 safe-outputs:
-  github-token: ${{ secrets.GITHUB_TOKEN }}
+  github-token: ${{ secrets.GIT_TOKEN || secrets.GITHUB_FINE_GRAINED_TOKEN || secrets.GITHUB_FINE_GRAIN_TOKEN || secrets.GITHUB_TOKEN }}
   mentions: false
   report-failure-as-issue: true
 
@@ -141,7 +140,7 @@ safe-outputs:
   # remediation summary goes in the PR description (body).
   create-pull-request:
     max: 1
-    base-branch: GHAW-Test
+    base-branch: ${{ github.event.repository.default_branch }}
     labels: [security, snyk, automated-remediation]
     # Snyk fixes are dependency-version edits to build manifests (pom.xml,
     # build.gradle, gradle.properties, libs.versions.toml). Those files are on the
@@ -172,7 +171,7 @@ safe-outputs:
 
 ## Overview
 
-You are an **elite, fully autonomous Snyk-powered dependency remediation agent** for Java/Spring Boot applications. You operate in **non-interactive mode** with a singular mission: **remediate dependency vulnerabilities across Critical/High/Medium wherever a safe, validated fix exists, and leave Low vulnerabilities documented for backlog handling** while ensuring build stability. Establish a baseline, apply dependency upgrades in a scan → fix → repeat loop, validate, and open ONE new pull request (base `GHAW-Test`) with the fixes plus one concise remediation summary in the PR description.
+You are an **elite, fully autonomous Snyk-powered dependency remediation agent** for Java/Spring Boot applications. You operate in **non-interactive mode** with a singular mission: **remediate dependency vulnerabilities across Critical/High/Medium wherever a safe, validated fix exists, and leave Low vulnerabilities documented for backlog handling** while ensuring build stability. Establish a baseline, apply dependency upgrades in a scan → fix → repeat loop, validate, and open ONE new pull request (base repository default branch) with the fixes plus one concise remediation summary in the PR description.
 
 ### Core Mandate
 - **Primary Goal**: Remediate all fixable dependency vulnerabilities across Critical, High, and Medium
@@ -561,7 +560,7 @@ Use this structure for the PR body:
 Open ONE new pull request via the `create-pull-request` safe-output:
 - Commit ONLY build-file changes (`pom.xml`, `build.gradle*`, `gradle.properties`, `libs.versions.toml`, `.snyk`). Never commit `/tmp/gh-aw/agent/security-analysis/**` scratch files or any report/log/scan file.
 - Put the full remediation summary (7.1) in the PR description (body).
-- Base branch is `GHAW-Test`; apply labels: `security`, `snyk`, `automated-remediation`.
+- Base branch is the repository default branch; apply labels: `security`, `snyk`, `automated-remediation`.
 - If `critical=0`, `high=0`, and `medium=0`, mark the PR as successful remediation even when Low findings remain (document those Low findings as residual risk). If validated improvements exist but unresolved findings remain at Critical/High/Medium, open the PR only if the final build and tests pass and state the residual risk in the body.
 
 ### 7.3 Create a Tracking Issue
@@ -627,7 +626,7 @@ After opening the pull request (or after determining no PR is needed), **always*
 - ✅ Build status = SUCCESS
 - ✅ Test pass rate ≥ baseline (no regressions)
 - ✅ PR description includes the remediation summary (severity counts, dependency changes, remaining issues, validation)
-- ✅ New pull request opened with the dependency fixes (base `GHAW-Test`)
+- ✅ New pull request opened with the dependency fixes (base repository default branch)
 - ✅ Tracking issue created via `create-issue` safe-output with the scan summary
 - ✅ No report/log/scan files committed to the repo
 
