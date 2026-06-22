@@ -1,5 +1,5 @@
-# gh-aw-metadata: {"schema_version":"v4","frontmatter_hash":"3894d5a23016b7036b8b3f05432211e7bd0eccb4488f89640ea53308a7a4c58e","body_hash":"4110d879e1265e362a34688bb9f4a8f274ea62618450968c21da8a50073bfc80","compiler_version":"v0.79.8","strict":true,"agent_id":"copilot","engine_versions":{"copilot":"1.0.60"},"agent_image_runner":"ubuntu-latest"}
-# gh-aw-manifest: {"version":1,"secrets":["COPILOT_GITHUB_TOKEN","GH_AW_CI_TRIGGER_TOKEN","GH_AW_GITHUB_MCP_SERVER_TOKEN","GH_AW_GITHUB_TOKEN","GITHUB_TOKEN","SNYK_TOKEN"],"actions":[{"repo":"actions/checkout","sha":"34e114876b0b11c390a56381ad16ebd13914f8d5","version":"v4"},{"repo":"actions/checkout","sha":"df4cb1c069e1874edd31b4311f1884172cec0e10","version":"v6.0.3"},{"repo":"actions/download-artifact","sha":"3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c","version":"v8.0.1"},{"repo":"actions/github-script","sha":"3a2844b7e9c422d3c10d287c895573f7108da1b3","version":"v9.0.0"},{"repo":"actions/setup-java","sha":"c1e323688fd81a25caa38c78aa6df2d33d3e20d9","version":"v4"},{"repo":"actions/setup-node","sha":"48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e","version":"v6.4.0"},{"repo":"actions/upload-artifact","sha":"043fb46d1a93c77aae656e7c1c64a875d1fc6a0a","version":"v7.0.1"},{"repo":"github/gh-aw-actions/setup","sha":"c0338fef4749d08c21f8f975fb0e37efa17dda47","version":"v0.79.8"}],"containers":[{"image":"ghcr.io/github/gh-aw-firewall/agent:0.27.2","digest":"sha256:f88e5b17b6b7a600117bc121114d6ce2155c88c983c0c939c5df884f730fa1d6","pinned_image":"ghcr.io/github/gh-aw-firewall/agent:0.27.2@sha256:f88e5b17b6b7a600117bc121114d6ce2155c88c983c0c939c5df884f730fa1d6"},{"image":"ghcr.io/github/gh-aw-firewall/api-proxy:0.27.2","digest":"sha256:ee39841d980878ebbb87592903b06d31a1af500c71525c9616f7e8e2a27041a4","pinned_image":"ghcr.io/github/gh-aw-firewall/api-proxy:0.27.2@sha256:ee39841d980878ebbb87592903b06d31a1af500c71525c9616f7e8e2a27041a4"},{"image":"ghcr.io/github/gh-aw-firewall/squid:0.27.2","digest":"sha256:2e3a717e5f19a654cd9a2263beb52012b56bcb68562ec5ae2e42f9d156b49591","pinned_image":"ghcr.io/github/gh-aw-firewall/squid:0.27.2@sha256:2e3a717e5f19a654cd9a2263beb52012b56bcb68562ec5ae2e42f9d156b49591"},{"image":"ghcr.io/github/gh-aw-mcpg:v0.3.25","digest":"sha256:c10331ad17668ef89f38f5e356678788a40b0cd5fef96e8f92e1d9c1de47cbaa","pinned_image":"ghcr.io/github/gh-aw-mcpg:v0.3.25@sha256:c10331ad17668ef89f38f5e356678788a40b0cd5fef96e8f92e1d9c1de47cbaa"},{"image":"ghcr.io/github/github-mcp-server:v1.1.2","digest":"sha256:30197479d8036c7811892bc07e06f9a05c9ef3cdd79bc59f256d50647f95788c","pinned_image":"ghcr.io/github/github-mcp-server:v1.1.2@sha256:30197479d8036c7811892bc07e06f9a05c9ef3cdd79bc59f256d50647f95788c"}]}
+# gh-aw-metadata: {"schema_version":"v4","frontmatter_hash":"0484b6eb69bd37eabc8dac6b3f49fa365097bfdfb47ccbb0d60d1f30b8e0ba09","body_hash":"51f01a4e1a6cff644a3152ceec66c62a481a62134bb30d2eebe398473d976670","compiler_version":"v0.79.8","strict":true,"agent_id":"copilot","engine_versions":{"copilot":"1.0.60"},"agent_image_runner":"ubuntu-latest"}
+# gh-aw-manifest: {"version":1,"secrets":["COPILOT_GITHUB_TOKEN","GH_AW_CI_TRIGGER_TOKEN","GH_AW_GITHUB_MCP_SERVER_TOKEN","GH_AW_GITHUB_TOKEN","GITHUB_FINE_GRAINED_TOKEN","GITHUB_FINE_GRAIN_TOKEN","GITHUB_TOKEN","GIT_TOKEN","SNYK_TOKEN"],"actions":[{"repo":"actions/checkout","sha":"34e114876b0b11c390a56381ad16ebd13914f8d5","version":"v4"},{"repo":"actions/checkout","sha":"df4cb1c069e1874edd31b4311f1884172cec0e10","version":"v6.0.3"},{"repo":"actions/download-artifact","sha":"3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c","version":"v8.0.1"},{"repo":"actions/github-script","sha":"3a2844b7e9c422d3c10d287c895573f7108da1b3","version":"v9.0.0"},{"repo":"actions/setup-java","sha":"c1e323688fd81a25caa38c78aa6df2d33d3e20d9","version":"v4"},{"repo":"actions/setup-node","sha":"48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e","version":"v6.4.0"},{"repo":"actions/upload-artifact","sha":"043fb46d1a93c77aae656e7c1c64a875d1fc6a0a","version":"v7.0.1"},{"repo":"github/gh-aw-actions/setup","sha":"c0338fef4749d08c21f8f975fb0e37efa17dda47","version":"v0.79.8"}],"containers":[{"image":"ghcr.io/github/gh-aw-firewall/agent:0.27.2","digest":"sha256:f88e5b17b6b7a600117bc121114d6ce2155c88c983c0c939c5df884f730fa1d6","pinned_image":"ghcr.io/github/gh-aw-firewall/agent:0.27.2@sha256:f88e5b17b6b7a600117bc121114d6ce2155c88c983c0c939c5df884f730fa1d6"},{"image":"ghcr.io/github/gh-aw-firewall/api-proxy:0.27.2","digest":"sha256:ee39841d980878ebbb87592903b06d31a1af500c71525c9616f7e8e2a27041a4","pinned_image":"ghcr.io/github/gh-aw-firewall/api-proxy:0.27.2@sha256:ee39841d980878ebbb87592903b06d31a1af500c71525c9616f7e8e2a27041a4"},{"image":"ghcr.io/github/gh-aw-firewall/squid:0.27.2","digest":"sha256:2e3a717e5f19a654cd9a2263beb52012b56bcb68562ec5ae2e42f9d156b49591","pinned_image":"ghcr.io/github/gh-aw-firewall/squid:0.27.2@sha256:2e3a717e5f19a654cd9a2263beb52012b56bcb68562ec5ae2e42f9d156b49591"},{"image":"ghcr.io/github/gh-aw-mcpg:v0.3.25","digest":"sha256:c10331ad17668ef89f38f5e356678788a40b0cd5fef96e8f92e1d9c1de47cbaa","pinned_image":"ghcr.io/github/gh-aw-mcpg:v0.3.25@sha256:c10331ad17668ef89f38f5e356678788a40b0cd5fef96e8f92e1d9c1de47cbaa"},{"image":"ghcr.io/github/github-mcp-server:v1.1.2","digest":"sha256:30197479d8036c7811892bc07e06f9a05c9ef3cdd79bc59f256d50647f95788c","pinned_image":"ghcr.io/github/github-mcp-server:v1.1.2@sha256:30197479d8036c7811892bc07e06f9a05c9ef3cdd79bc59f256d50647f95788c"}]}
 # This file was automatically generated by gh-aw (v0.79.8). DO NOT EDIT. To debug this workflow, load the skill at https://github.com/github/gh-aw/blob/main/debug.md
 #
 #    ___                   _   _      
@@ -27,7 +27,7 @@
 # applications. Checks out the branch, establishes a build/test baseline, runs a
 # Snyk Open Source (SCA) scan, applies dependency upgrades in a scan → fix → repeat
 # loop, validates the build and tests, and opens ONE new pull request (base
-# GHAW-Test) with the dependency fixes plus a concise remediation summary in the
+# repository default branch) with the dependency fixes plus a concise remediation summary in the
 # PR description.
 #
 # Secrets used:
@@ -35,7 +35,10 @@
 #   - GH_AW_CI_TRIGGER_TOKEN
 #   - GH_AW_GITHUB_MCP_SERVER_TOKEN
 #   - GH_AW_GITHUB_TOKEN
+#   - GITHUB_FINE_GRAINED_TOKEN
+#   - GITHUB_FINE_GRAIN_TOKEN
 #   - GITHUB_TOKEN
+#   - GIT_TOKEN
 #   - SNYK_TOKEN
 #
 # Custom actions used:
@@ -439,9 +442,9 @@ jobs:
           github.event.pull_request || github.event.issue.pull_request || github.event_name == 'workflow_dispatch' && fromJSON(github.event.inputs.aw_context || '{}').item_type == 'pull_request'
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GIT_TOKEN || secrets.GITHUB_FINE_GRAINED_TOKEN || secrets.GITHUB_FINE_GRAIN_TOKEN || secrets.GITHUB_TOKEN }}
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GIT_TOKEN || secrets.GITHUB_FINE_GRAINED_TOKEN || secrets.GITHUB_FINE_GRAIN_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
             const { setupGlobals } = require('${{ runner.temp }}/gh-aw/actions/setup_globals.cjs');
             setupGlobals(core, github, context, exec, io, getOctokit);
@@ -490,9 +493,9 @@ jobs:
           mkdir -p "${RUNNER_TEMP}/gh-aw/safeoutputs"
           mkdir -p /tmp/gh-aw/safeoutputs
           mkdir -p /tmp/gh-aw/mcp-logs/safeoutputs
-          cat > "${RUNNER_TEMP}/gh-aw/safeoutputs/config.json" << 'GH_AW_SAFE_OUTPUTS_CONFIG_bd1a5d8049f4f4a2_EOF'
-          {"create_issue":{"labels":["security","snyk","automated-remediation","control-plane-snyk-remediation"],"max":1},"create_pull_request":{"allowed_files":["pom.xml","**/pom.xml","build.gradle","**/build.gradle","build.gradle.kts","**/build.gradle.kts","settings.gradle","**/settings.gradle","gradle/libs.versions.toml","**/gradle/libs.versions.toml","gradle.properties","**/gradle.properties",".snyk"],"base_branch":"GHAW-Test","labels":["security","snyk","automated-remediation"],"max":1,"max_patch_files":100,"max_patch_size":1024,"protect_top_level_dot_folders":true,"protected_files":["package.json","bun.lockb","bunfig.toml","deno.json","deno.jsonc","deno.lock","global.json","NuGet.Config","Directory.Packages.props","mix.exs","mix.lock","go.mod","go.sum","stack.yaml","stack.yaml.lock","pom.xml","build.gradle","build.gradle.kts","settings.gradle","settings.gradle.kts","gradle.properties","package-lock.json","yarn.lock","pnpm-lock.yaml","npm-shrinkwrap.json","requirements.txt","Pipfile","Pipfile.lock","pyproject.toml","setup.py","setup.cfg","Gemfile","Gemfile.lock","uv.lock","CODEOWNERS","DESIGN.md","README.md","CONTRIBUTING.md","CHANGELOG.md","SECURITY.md","CODE_OF_CONDUCT.md","AGENTS.md","CLAUDE.md","GEMINI.md"],"protected_files_policy":"allowed"},"create_report_incomplete_issue":{},"mentions":{"enabled":false},"missing_data":{},"missing_tool":{},"noop":{"max":1,"report-as-issue":"true"},"report_incomplete":{}}
-          GH_AW_SAFE_OUTPUTS_CONFIG_bd1a5d8049f4f4a2_EOF
+          cat > "${RUNNER_TEMP}/gh-aw/safeoutputs/config.json" << 'GH_AW_SAFE_OUTPUTS_CONFIG_80f55ae85c6746f9_EOF'
+          {"create_issue":{"labels":["security","snyk","automated-remediation","control-plane-snyk-remediation"],"max":1},"create_pull_request":{"allowed_files":["pom.xml","**/pom.xml","build.gradle","**/build.gradle","build.gradle.kts","**/build.gradle.kts","settings.gradle","**/settings.gradle","gradle/libs.versions.toml","**/gradle/libs.versions.toml","gradle.properties","**/gradle.properties",".snyk"],"base_branch":"${{ github.event.repository.default_branch }}","labels":["security","snyk","automated-remediation"],"max":1,"max_patch_files":100,"max_patch_size":1024,"protect_top_level_dot_folders":true,"protected_files":["package.json","bun.lockb","bunfig.toml","deno.json","deno.jsonc","deno.lock","global.json","NuGet.Config","Directory.Packages.props","mix.exs","mix.lock","go.mod","go.sum","stack.yaml","stack.yaml.lock","pom.xml","build.gradle","build.gradle.kts","settings.gradle","settings.gradle.kts","gradle.properties","package-lock.json","yarn.lock","pnpm-lock.yaml","npm-shrinkwrap.json","requirements.txt","Pipfile","Pipfile.lock","pyproject.toml","setup.py","setup.cfg","Gemfile","Gemfile.lock","uv.lock","CODEOWNERS","DESIGN.md","README.md","CONTRIBUTING.md","CHANGELOG.md","SECURITY.md","CODE_OF_CONDUCT.md","AGENTS.md","CLAUDE.md","GEMINI.md"],"protected_files_policy":"allowed"},"create_report_incomplete_issue":{},"mentions":{"enabled":false},"missing_data":{},"missing_tool":{},"noop":{"max":1,"report-as-issue":"true"},"report_incomplete":{}}
+          GH_AW_SAFE_OUTPUTS_CONFIG_80f55ae85c6746f9_EOF
       - name: Generate Safe Outputs Tools
         env:
           GH_AW_TOOLS_META_JSON: |
@@ -1186,11 +1189,14 @@ jobs:
             const { main } = require('${{ runner.temp }}/gh-aw/actions/redact_secrets.cjs');
             await main();
         env:
-          GH_AW_SECRET_NAMES: 'COPILOT_GITHUB_TOKEN,GH_AW_GITHUB_MCP_SERVER_TOKEN,GH_AW_GITHUB_TOKEN,GITHUB_TOKEN,SNYK_TOKEN'
+          GH_AW_SECRET_NAMES: 'COPILOT_GITHUB_TOKEN,GH_AW_GITHUB_MCP_SERVER_TOKEN,GH_AW_GITHUB_TOKEN,GITHUB_FINE_GRAINED_TOKEN,GITHUB_FINE_GRAIN_TOKEN,GITHUB_TOKEN,GIT_TOKEN,SNYK_TOKEN'
           SECRET_COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
           SECRET_GH_AW_GITHUB_MCP_SERVER_TOKEN: ${{ secrets.GH_AW_GITHUB_MCP_SERVER_TOKEN }}
           SECRET_GH_AW_GITHUB_TOKEN: ${{ secrets.GH_AW_GITHUB_TOKEN }}
+          SECRET_GITHUB_FINE_GRAINED_TOKEN: ${{ secrets.GITHUB_FINE_GRAINED_TOKEN }}
+          SECRET_GITHUB_FINE_GRAIN_TOKEN: ${{ secrets.GITHUB_FINE_GRAIN_TOKEN }}
           SECRET_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SECRET_GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
           SECRET_SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       - name: Append agent step summary
         if: always()
@@ -1417,7 +1423,7 @@ jobs:
           GH_AW_AMBIENT_CONTEXT: ${{ needs.agent.outputs.ambient_context }}
           GH_AW_WORKFLOW_ID: "snyk-remediation"
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GIT_TOKEN || secrets.GITHUB_FINE_GRAINED_TOKEN || secrets.GITHUB_FINE_GRAIN_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
             const { setupGlobals } = require('${{ runner.temp }}/gh-aw/actions/setup_globals.cjs');
             setupGlobals(core, github, context, exec, io, getOctokit);
@@ -1434,7 +1440,7 @@ jobs:
           GH_AW_DETECTION_CONCLUSION: ${{ needs.detection.outputs.detection_conclusion }}
           GH_AW_DETECTION_REASON: ${{ needs.detection.outputs.detection_reason }}
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GIT_TOKEN || secrets.GITHUB_FINE_GRAINED_TOKEN || secrets.GITHUB_FINE_GRAIN_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
             const { setupGlobals } = require('${{ runner.temp }}/gh-aw/actions/setup_globals.cjs');
             setupGlobals(core, github, context, exec, io, getOctokit);
@@ -1449,7 +1455,7 @@ jobs:
           GH_AW_WORKFLOW_NAME: "Snyk-Agent"
           GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/snyk-remediation.md"
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GIT_TOKEN || secrets.GITHUB_FINE_GRAINED_TOKEN || secrets.GITHUB_FINE_GRAIN_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
             const { setupGlobals } = require('${{ runner.temp }}/gh-aw/actions/setup_globals.cjs');
             setupGlobals(core, github, context, exec, io, getOctokit);
@@ -1464,7 +1470,7 @@ jobs:
           GH_AW_WORKFLOW_NAME: "Snyk-Agent"
           GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/snyk-remediation.md"
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GIT_TOKEN || secrets.GITHUB_FINE_GRAINED_TOKEN || secrets.GITHUB_FINE_GRAIN_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
             const { setupGlobals } = require('${{ runner.temp }}/gh-aw/actions/setup_globals.cjs');
             setupGlobals(core, github, context, exec, io, getOctokit);
@@ -1509,7 +1515,7 @@ jobs:
           GH_AW_MISSING_DATA_REPORT_AS_FAILURE: "true"
           GH_AW_TIMEOUT_MINUTES: "45"
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GIT_TOKEN || secrets.GITHUB_FINE_GRAINED_TOKEN || secrets.GITHUB_FINE_GRAIN_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
             const { setupGlobals } = require('${{ runner.temp }}/gh-aw/actions/setup_globals.cjs');
             setupGlobals(core, github, context, exec, io, getOctokit);
@@ -1614,7 +1620,7 @@ jobs:
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           WORKFLOW_NAME: "Snyk-Agent"
-          WORKFLOW_DESCRIPTION: "Autonomous Snyk dependency vulnerability remediation agent for Java/Spring Boot\napplications. Checks out the branch, establishes a build/test baseline, runs a\nSnyk Open Source (SCA) scan, applies dependency upgrades in a scan → fix → repeat\nloop, validates the build and tests, and opens ONE new pull request (base\nGHAW-Test) with the dependency fixes plus a concise remediation summary in the\nPR description."
+          WORKFLOW_DESCRIPTION: "Autonomous Snyk dependency vulnerability remediation agent for Java/Spring Boot\napplications. Checks out the branch, establishes a build/test baseline, runs a\nSnyk Open Source (SCA) scan, applies dependency upgrades in a scan → fix → repeat\nloop, validates the build and tests, and opens ONE new pull request (base\nrepository default branch) with the dependency fixes plus a concise remediation summary in the\nPR description."
           HAS_PATCH: ${{ needs.agent.outputs.has_patch }}
         with:
           script: |
@@ -1841,15 +1847,15 @@ jobs:
         uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           ref: ${{ github.event.repository.default_branch }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GIT_TOKEN || secrets.GITHUB_FINE_GRAINED_TOKEN || secrets.GITHUB_FINE_GRAIN_TOKEN || secrets.GITHUB_TOKEN }}
           persist-credentials: false
           fetch-depth: 1
       - name: Checkout repository
         if: (!cancelled()) && needs.agent.result != 'skipped' && contains(needs.agent.outputs.output_types, 'create_pull_request') && github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
         uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
-          ref: GHAW-Test
-          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ github.event.repository.default_branch }}
+          token: ${{ secrets.GIT_TOKEN || secrets.GITHUB_FINE_GRAINED_TOKEN || secrets.GITHUB_FINE_GRAIN_TOKEN || secrets.GITHUB_TOKEN }}
           persist-credentials: false
           fetch-depth: 1
       - name: Configure Git credentials
@@ -1857,7 +1863,7 @@ jobs:
         env:
           REPO_NAME: ${{ github.repository }}
           SERVER_URL: ${{ github.server_url }}
-          GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_TOKEN: ${{ secrets.GIT_TOKEN || secrets.GITHUB_FINE_GRAINED_TOKEN || secrets.GITHUB_FINE_GRAIN_TOKEN || secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
@@ -1885,11 +1891,11 @@ jobs:
           GH_AW_ALLOWED_DOMAINS: "*.gradle-enterprise.cloud,*.snyk.io,adoptium.net,api.adoptium.net,api.business.githubcopilot.com,api.enterprise.githubcopilot.com,api.foojay.io,api.github.com,api.githubcopilot.com,api.individual.githubcopilot.com,api.npms.io,api.snapcraft.io,api.snyk.io,archive.apache.org,archive.ubuntu.com,azure.archive.ubuntu.com,bun.sh,cdn.azul.com,cdn.jsdelivr.net,central.sonatype.com,crl.geotrust.com,crl.globalsign.com,crl.identrust.com,crl.sectigo.com,crl.thawte.com,crl.usertrust.com,crl.verisign.com,crl3.digicert.com,crl4.digicert.com,crls.ssl.com,deb.nodesource.com,deno.land,develocity.apache.org,dl.google.com,dlcdn.apache.org,download.eclipse.org,download.java.net,download.oracle.com,downloads.gradle-dn.com,esm.sh,ge.spockframework.org,get.pnpm.io,github.com,googleapis.deno.dev,googlechromelabs.github.io,gradle.org,host.docker.internal,jcenter.bintray.com,jdk.java.net,json-schema.org,json.schemastore.org,jsr.io,keyserver.ubuntu.com,maven-central.storage-download.googleapis.com,maven.apache.org,maven.google.com,maven.oracle.com,maven.pkg.github.com,nodejs.org,npm.pkg.github.com,npmjs.com,npmjs.org,ocsp.digicert.com,ocsp.geotrust.com,ocsp.globalsign.com,ocsp.identrust.com,ocsp.sectigo.com,ocsp.ssl.com,ocsp.thawte.com,ocsp.usertrust.com,ocsp.verisign.com,packagecloud.io,packages.cloud.google.com,packages.microsoft.com,plugins-artifacts.gradle.org,plugins.gradle.org,ppa.launchpad.net,raw.githubusercontent.com,registry.bower.io,registry.npmjs.com,registry.npmjs.org,registry.yarnpkg.com,repo.gradle.org,repo.grails.org,repo.maven.apache.org,repo.spring.io,repo.yarnpkg.com,repo1.maven.org,repository.apache.org,s.symcb.com,s.symcd.com,scans-in.gradle.com,search.maven.org,security.ubuntu.com,services.gradle.org,skimdb.npmjs.com,snyk.io,storage.googleapis.com,telemetry.enterprise.githubcopilot.com,telemetry.vercel.com,ts-crl.ws.symantec.com,ts-ocsp.ws.symantec.com,www.googleapis.com,www.java.com,www.npmjs.com,www.npmjs.org,yarnpkg.com"
           GITHUB_SERVER_URL: ${{ github.server_url }}
           GITHUB_API_URL: ${{ github.api_url }}
-          GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "{\"create_issue\":{\"labels\":[\"security\",\"snyk\",\"automated-remediation\",\"control-plane-snyk-remediation\"],\"max\":1},\"create_pull_request\":{\"allowed_files\":[\"pom.xml\",\"**/pom.xml\",\"build.gradle\",\"**/build.gradle\",\"build.gradle.kts\",\"**/build.gradle.kts\",\"settings.gradle\",\"**/settings.gradle\",\"gradle/libs.versions.toml\",\"**/gradle/libs.versions.toml\",\"gradle.properties\",\"**/gradle.properties\",\".snyk\"],\"base_branch\":\"GHAW-Test\",\"labels\":[\"security\",\"snyk\",\"automated-remediation\"],\"max\":1,\"max_patch_files\":100,\"max_patch_size\":1024,\"protect_top_level_dot_folders\":true,\"protected_files\":[\"package.json\",\"bun.lockb\",\"bunfig.toml\",\"deno.json\",\"deno.jsonc\",\"deno.lock\",\"global.json\",\"NuGet.Config\",\"Directory.Packages.props\",\"mix.exs\",\"mix.lock\",\"go.mod\",\"go.sum\",\"stack.yaml\",\"stack.yaml.lock\",\"pom.xml\",\"build.gradle\",\"build.gradle.kts\",\"settings.gradle\",\"settings.gradle.kts\",\"gradle.properties\",\"package-lock.json\",\"yarn.lock\",\"pnpm-lock.yaml\",\"npm-shrinkwrap.json\",\"requirements.txt\",\"Pipfile\",\"Pipfile.lock\",\"pyproject.toml\",\"setup.py\",\"setup.cfg\",\"Gemfile\",\"Gemfile.lock\",\"uv.lock\",\"CODEOWNERS\",\"DESIGN.md\",\"README.md\",\"CONTRIBUTING.md\",\"CHANGELOG.md\",\"SECURITY.md\",\"CODE_OF_CONDUCT.md\",\"AGENTS.md\",\"CLAUDE.md\",\"GEMINI.md\"],\"protected_files_policy\":\"allowed\"},\"create_report_incomplete_issue\":{},\"mentions\":{\"enabled\":false},\"missing_data\":{},\"missing_tool\":{},\"noop\":{\"max\":1,\"report-as-issue\":\"true\"},\"report_incomplete\":{}}"
+          GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "{\"create_issue\":{\"labels\":[\"security\",\"snyk\",\"automated-remediation\",\"control-plane-snyk-remediation\"],\"max\":1},\"create_pull_request\":{\"allowed_files\":[\"pom.xml\",\"**/pom.xml\",\"build.gradle\",\"**/build.gradle\",\"build.gradle.kts\",\"**/build.gradle.kts\",\"settings.gradle\",\"**/settings.gradle\",\"gradle/libs.versions.toml\",\"**/gradle/libs.versions.toml\",\"gradle.properties\",\"**/gradle.properties\",\".snyk\"],\"base_branch\":\"${{ github.event.repository.default_branch }}\",\"labels\":[\"security\",\"snyk\",\"automated-remediation\"],\"max\":1,\"max_patch_files\":100,\"max_patch_size\":1024,\"protect_top_level_dot_folders\":true,\"protected_files\":[\"package.json\",\"bun.lockb\",\"bunfig.toml\",\"deno.json\",\"deno.jsonc\",\"deno.lock\",\"global.json\",\"NuGet.Config\",\"Directory.Packages.props\",\"mix.exs\",\"mix.lock\",\"go.mod\",\"go.sum\",\"stack.yaml\",\"stack.yaml.lock\",\"pom.xml\",\"build.gradle\",\"build.gradle.kts\",\"settings.gradle\",\"settings.gradle.kts\",\"gradle.properties\",\"package-lock.json\",\"yarn.lock\",\"pnpm-lock.yaml\",\"npm-shrinkwrap.json\",\"requirements.txt\",\"Pipfile\",\"Pipfile.lock\",\"pyproject.toml\",\"setup.py\",\"setup.cfg\",\"Gemfile\",\"Gemfile.lock\",\"uv.lock\",\"CODEOWNERS\",\"DESIGN.md\",\"README.md\",\"CONTRIBUTING.md\",\"CHANGELOG.md\",\"SECURITY.md\",\"CODE_OF_CONDUCT.md\",\"AGENTS.md\",\"CLAUDE.md\",\"GEMINI.md\"],\"protected_files_policy\":\"allowed\"},\"create_report_incomplete_issue\":{},\"mentions\":{\"enabled\":false},\"missing_data\":{},\"missing_tool\":{},\"noop\":{\"max\":1,\"report-as-issue\":\"true\"},\"report_incomplete\":{}}"
           GH_AW_CI_TRIGGER_TOKEN: ${{ secrets.GH_AW_CI_TRIGGER_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN || secrets.GITHUB_FINE_GRAINED_TOKEN || secrets.GITHUB_FINE_GRAIN_TOKEN || secrets.GITHUB_TOKEN }}
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GIT_TOKEN || secrets.GITHUB_FINE_GRAINED_TOKEN || secrets.GITHUB_FINE_GRAIN_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
             const { setupGlobals } = require('${{ runner.temp }}/gh-aw/actions/setup_globals.cjs');
             setupGlobals(core, github, context, exec, io, getOctokit);
