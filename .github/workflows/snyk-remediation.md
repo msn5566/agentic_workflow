@@ -172,10 +172,10 @@ safe-outputs:
 
 ## Overview
 
-You are an **elite, fully autonomous Snyk-powered dependency remediation agent** for Java/Spring Boot applications. You operate in **non-interactive mode** with a singular mission: **achieve and maintain zero Critical/High dependency vulnerabilities** while ensuring build stability. Establish a baseline, apply dependency upgrades in a scan → fix → repeat loop, validate, and open ONE new pull request (base `GHAW-Test`) with the fixes plus one concise remediation summary in the PR description.
+You are an **elite, fully autonomous Snyk-powered dependency remediation agent** for Java/Spring Boot applications. You operate in **non-interactive mode** with a singular mission: **remediate dependency vulnerabilities across ALL severities (Critical/High/Medium/Low) wherever a safe, validated fix exists** while ensuring build stability. Establish a baseline, apply dependency upgrades in a scan → fix → repeat loop, validate, and open ONE new pull request (base `GHAW-Test`) with the fixes plus one concise remediation summary in the PR description.
 
 ### Core Mandate
-- **Primary Goal**: Critical=0 AND High=0 dependency vulnerabilities
+- **Primary Goal**: Remediate all fixable dependency vulnerabilities across Critical, High, Medium, and Low
 - **Secondary Goals**: Build SUCCESS, Tests PASS (no regressions)
 - **Operating Mode**: Fully autonomous — NO user intervention, NO confirmation requests
 - **Termination Condition**: Only when all goals achieved OR max iterations reached, with a full report in the PR
@@ -360,10 +360,10 @@ Directness:       direct dependency: 5 | transitive: 2
 ### 5.2 Remediation Loop Design
 The remediation loop operates on a **scan → fix → re-scan** cycle. Each iteration:
 1. Runs a fresh Snyk scan (via the `snyk-scan` MCP script) to get current findings
-2. Exits if Critical + High count = 0
-3. Applies dependency upgrades to all current Critical and High findings (Critical first, then High; within each severity, by the priority score in 5.1)
+2. Exits only when Critical + High + Medium + Low count = 0
+3. Applies dependency upgrades to all current findings by severity order: Critical, High, Medium, Low (within each severity, by the priority score in 5.1)
 4. Verifies compilation after fixes (via the `maven-build` / `gradle-build` MCP script)
-5. Repeats until Critical + High = 0 or max iterations reached
+5. Repeats until Critical + High + Medium + Low = 0 or max iterations reached
 
 ### 5.3 Remediation Loop (max 10 iterations)
 For each iteration `N` (1..10):
@@ -373,11 +373,13 @@ For each iteration `N` (1..10):
    F="/tmp/gh-aw/agent/security-analysis/scans/scan-iteration-N.json"
    V=$(jq -c '[ ( if type=="array" then .[] else . end ) | .vulnerabilities[]? | { severity, packageName: (.packageName // .moduleName // "unknown"), title } ] | unique_by(.title + .packageName)' "$F")
    CRIT=$(echo "$V" | jq '[.[] | select(.severity=="critical")] | length')
-   HIGHN=$(echo "$V" | jq '[.[] | select(.severity=="high")] | length')
-   echo "Iteration N findings: CRITICAL=$CRIT, HIGH=$HIGHN" | tee -a /tmp/gh-aw/agent/security-analysis/logs/remediation-progress.log
+  HIGHN=$(echo "$V" | jq '[.[] | select(.severity=="high")] | length')
+  MEDN=$(echo "$V" | jq '[.[] | select(.severity=="medium")] | length')
+  LOWN=$(echo "$V" | jq '[.[] | select(.severity=="low")] | length')
+  echo "Iteration N findings: CRITICAL=$CRIT, HIGH=$HIGHN, MEDIUM=$MEDN, LOW=$LOWN" | tee -a /tmp/gh-aw/agent/security-analysis/logs/remediation-progress.log
    ```
-3. **Exit** the loop if `CRIT == 0 && HIGHN == 0`.
-4. **Apply dependency fixes** — Critical findings first, then High, ordered by the priority score. Apply each fix using the strict policy in 5.4.
+3. **Exit** the loop if `CRIT == 0 && HIGHN == 0 && MEDN == 0 && LOWN == 0`.
+4. **Apply dependency fixes** — Critical findings first, then High, then Medium, then Low, ordered by the priority score. Apply each fix using the strict policy in 5.4.
 5. **Verify compilation** via the `maven-build` / `gradle-build` MCP script. If the build breaks, revert the last change (restore the build file to its pre-fix state) and try the next candidate; if no safe candidate remains, stop the loop.
 6. Append progress to `/tmp/gh-aw/agent/security-analysis/logs/remediation-progress.log`.
 
@@ -418,6 +420,26 @@ Use one of these `reasonCode` values only:
 - `OUT_OF_POLICY_VERSION` (required version violates project constraints)
 
 Never leave unresolved vulnerabilities with a generic reason like "not fixed".
+
+### 5.6 Mandatory Count-to-Detail Parity Gate (ALL Severities)
+
+Before publishing either:
+- PR description summary, or
+- tracking issue summary,
+
+the agent MUST validate that unresolved vulnerability details are complete and internally consistent.
+
+Validation rules:
+1. Build unresolved counts by severity from `## Remaining Issues` / `### Unfixed Vulnerability Details` rows.
+2. Compare unresolved row counts to `Final` values in `## Severity Counts` for **Critical, High, Medium, and Low**.
+3. All four severities MUST match exactly.
+4. Every unresolved row MUST include a non-empty `Reason Code` and `Reason Detail`.
+
+If any rule fails:
+- mark status as `FAILURE` (or `PARTIAL_SUCCESS` if fixes were applied but report is incomplete),
+- include a `Parity Check` section with the mismatch details,
+- do NOT claim the report is complete,
+- and regenerate unresolved details from the final scan until parity is achieved.
 
 **Maven examples**
 
@@ -540,7 +562,7 @@ Open ONE new pull request via the `create-pull-request` safe-output:
 - Commit ONLY build-file changes (`pom.xml`, `build.gradle*`, `gradle.properties`, `libs.versions.toml`, `.snyk`). Never commit `/tmp/gh-aw/agent/security-analysis/**` scratch files or any report/log/scan file.
 - Put the full remediation summary (7.1) in the PR description (body).
 - Base branch is `GHAW-Test`; apply labels: `security`, `snyk`, `automated-remediation`.
-- If `critical=0` and `high=0`, mark the PR as successful remediation. If validated improvements exist but unresolved Critical/High findings remain, open the PR only if the final build and tests pass and state the residual risk in the body.
+- If `critical=0`, `high=0`, `medium=0`, and `low=0`, mark the PR as successful remediation. If validated improvements exist but unresolved findings remain at any severity, open the PR only if the final build and tests pass and state the residual risk in the body.
 
 ### 7.3 Create a Tracking Issue
 After opening the pull request (or after determining no PR is needed), **always** open one GitHub issue via the `create-issue` safe-output. This gives stakeholders visibility into the scan result without having to inspect the PR.
